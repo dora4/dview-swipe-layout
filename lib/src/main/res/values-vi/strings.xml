@@ -1,0 +1,12 @@
+<resources>
+    <string name="sl_pull_to_refresh">Kéo xuống để làm mới</string>
+    <string name="sl_release_to_refresh">phát hành làm mới</string>
+    <string name="sl_refreshing">Làm mới</string>
+    <string name="sl_refresh_succeed">Làm mới thành công</string>
+    <string name="sl_refresh_fail">Làm mới không thành công</string>
+    <string name="sl_pullup_to_load">tải kéo lên</string>
+    <string name="sl_release_to_load">tải phát hành</string>
+    <string name="sl_loading">đang tải</string>
+    <string name="sl_load_succeed">Đang tải thành công</string>
+    <string name="sl_load_fail">Không tải được</string>
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="sl_pull_to_refresh">プルダウンして更新します</string>
+    <string name="sl_release_to_refresh">リリースリフレッシュ</string>
+    <string name="sl_refreshing">さわやか</string>
+    <string name="sl_refresh_succeed">更新に成功しました</string>
+    <string name="sl_refresh_fail">更新に失敗しました</string>
+    <string name="sl_pullup_to_load">プルアップローディング</string>
+    <string name="sl_release_to_load">荷重を解放する</string>
+    <string name="sl_loading">読み込み中</string>
+    <string name="sl_load_succeed">正常にロードされました</string>
+    <string name="sl_load_fail">読み込みに失敗しました</string>
+</resources>

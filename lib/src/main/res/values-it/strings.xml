@@ -1,0 +1,12 @@
+<resources>
+    <string name="sl_pull_to_refresh">Tirare verso il basso per rinfrescare</string>
+    <string name="sl_release_to_refresh">aggiornamento del rilascio</string>
+    <string name="sl_refreshing">Rinfrescante</string>
+    <string name="sl_refresh_succeed">Aggiornamento riuscito</string>
+    <string name="sl_refresh_fail">Aggiornamento non riuscito</string>
+    <string name="sl_pullup_to_load">caricamento in pull-up</string>
+    <string name="sl_release_to_load">rilasciare il carico</string>
+    <string name="sl_loading">caricamento</string>
+    <string name="sl_load_succeed">Caricamento riuscito</string>
+    <string name="sl_load_fail">Caricamento fallito</string>
+</resources>

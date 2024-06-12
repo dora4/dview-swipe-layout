@@ -1,0 +1,12 @@
+<resources>
+    <string name="sl_pull_to_refresh">Puxe para baixo para atualizar</string>
+    <string name="sl_release_to_refresh">atualização de lançamento</string>
+    <string name="sl_refreshing">Refrescante</string>
+    <string name="sl_refresh_succeed">Atualização bem-sucedida</string>
+    <string name="sl_refresh_fail">Falha na atualização</string>
+    <string name="sl_pullup_to_load">carregamento pull-up</string>
+    <string name="sl_release_to_load">liberar carga</string>
+    <string name="sl_loading">carregando</string>
+    <string name="sl_load_succeed">Carregando com sucesso</string>
+    <string name="sl_load_fail">Falha ao carregar</string>
+</resources>

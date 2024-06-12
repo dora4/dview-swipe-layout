@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorMainText">@color/white</color>
+    <color name="colorSecondaryText">#898e92</color>
+    <color name="colorSwipeLayoutBg">#232323</color>
+</resources>

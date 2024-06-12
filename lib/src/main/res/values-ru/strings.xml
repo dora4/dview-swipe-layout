@@ -1,0 +1,12 @@
+<resources>
+    <string name="sl_pull_to_refresh">Потяните вниз, чтобы обновить</string>
+    <string name="sl_release_to_refresh">обновление выпуска</string>
+    <string name="sl_refreshing">Освежающий</string>
+    <string name="sl_refresh_succeed">Обновить успешно</string>
+    <string name="sl_refresh_fail">Обновить не удалось</string>
+    <string name="sl_pullup_to_load">подтягивающая загрузка</string>
+    <string name="sl_release_to_load">снять нагрузку</string>
+    <string name="sl_loading">загрузка</string>
+    <string name="sl_load_succeed">Загрузка прошла успешно</string>
+    <string name="sl_load_fail">Ошибка загрузки</string>
+</resources>

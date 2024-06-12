@@ -1,0 +1,12 @@
+<resources>
+    <string name="sl_pull_to_refresh">下拉刷新</string>
+    <string name="sl_release_to_refresh">釋放刷新</string>
+    <string name="sl_refreshing">正在刷新</string>
+    <string name="sl_refresh_succeed">刷新成功</string>
+    <string name="sl_refresh_fail">刷新失敗</string>
+    <string name="sl_pullup_to_load">上拉加載</string>
+    <string name="sl_release_to_load">釋放加載</string>
+    <string name="sl_loading">正在加載</string>
+    <string name="sl_load_succeed">加載成功</string>
+    <string name="sl_load_fail">加載失敗</string>
+</resources>

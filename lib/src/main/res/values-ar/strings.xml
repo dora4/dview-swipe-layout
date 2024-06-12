@@ -1,0 +1,12 @@
+<resources>
+    <string name="sl_pull_to_refresh">للتحديث اسحب للأسفل</string>
+    <string name="sl_release_to_refresh">الافراج عن التحديث</string>
+    <string name="sl_refreshing">منعش</string>
+    <string name="sl_refresh_succeed">تم التحديث بنجاح</string>
+    <string name="sl_refresh_fail">فشل التحديث</string>
+    <string name="sl_pullup_to_load">تحميل السحب</string>
+    <string name="sl_release_to_load">الافراج عن الحمل</string>
+    <string name="sl_loading">تحميل</string>
+    <string name="sl_load_succeed">تم التحميل بنجاح</string>
+    <string name="sl_load_fail">فشل في التحميل</string>
+</resources>

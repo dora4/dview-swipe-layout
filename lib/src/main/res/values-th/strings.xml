@@ -1,0 +1,12 @@
+<resources>
+    <string name="sl_pull_to_refresh">ดึงลงเพื่อรีเฟรช</string>
+    <string name="sl_release_to_refresh">ปล่อยการรีเฟรช</string>
+    <string name="sl_refreshing">สดชื่น</string>
+    <string name="sl_refresh_succeed">รีเฟรชสำเร็จ</string>
+    <string name="sl_refresh_fail">รีเฟรชล้มเหลว</string>
+    <string name="sl_pullup_to_load">กำลังโหลดแบบดึงขึ้น</string>
+    <string name="sl_release_to_load">ปล่อยโหลด</string>
+    <string name="sl_loading">กำลังโหลด</string>
+    <string name="sl_load_succeed">กำลังโหลดสำเร็จ</string>
+    <string name="sl_load_fail">โหลดไม่สำเร็จ</string>
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="sl_pull_to_refresh">아래로 당겨 새로고침하세요.</string>
+    <string name="sl_release_to_refresh">릴리스 새로 고침</string>
+    <string name="sl_refreshing">상쾌함</string>
+    <string name="sl_refresh_succeed">새로고침 성공</string>
+    <string name="sl_refresh_fail">새로고침 실패</string>
+    <string name="sl_pullup_to_load">풀업 로딩</string>
+    <string name="sl_release_to_load">로드를 해제하다</string>
+    <string name="sl_loading">로드 중</string>
+    <string name="sl_load_succeed">성공적으로 로드 중</string>
+    <string name="sl_load_fail">불러 오지 못했습니다</string>
+</resources>

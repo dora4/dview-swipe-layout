@@ -1,0 +1,12 @@
+<resources>
+    <string name="sl_pull_to_refresh">Déroulez pour actualiser</string>
+    <string name="sl_release_to_refresh">actualización de lanzamiento</string>
+    <string name="sl_refreshing">Rafraîchissant</string>
+    <string name="sl_refresh_succeed">Actualisation réussie</string>
+    <string name="sl_refresh_fail">Échec de l\'actualisation</string>
+    <string name="sl_pullup_to_load">chargement par traction</string>
+    <string name="sl_release_to_load">relâcher la charge</string>
+    <string name="sl_loading">chargement</string>
+    <string name="sl_load_succeed">Chargement réussi</string>
+    <string name="sl_load_fail">Échec du chargement</string>
+</resources>
