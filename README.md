@@ -2,6 +2,10 @@ dview-swipe-layout
 ![Release](https://jitpack.io/v/dora4/dview-swipe-layout.svg)
 --------------------------------
 
+#### 卡片
+
+![Dora视图_Swipe_Layout---](https://github.com/user-attachments/assets/0913d8ac-3f5f-4038-a8c7-d49c33c2fc5b)
+
 #### Gradle依赖配置
 
 ```groovy
