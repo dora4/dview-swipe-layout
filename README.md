@@ -3,8 +3,7 @@ dview-swipe-layout
 --------------------------------
 
 #### 卡片
-
-![DORA视图 轮回涌动龙](https://github.com/user-attachments/assets/11bd9c8e-d510-4d78-8225-9eb8d0a76511)
+![DORA视图 轮回涌动龙](https://github.com/user-attachments/assets/9c1ed908-6a40-4984-8e3f-2c6f9e21d756)
 ##### 卡名：Dora视图 SwipeLayout
 ###### 卡片类型：同调怪兽
 ###### 属性：光
