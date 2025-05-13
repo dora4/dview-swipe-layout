@@ -4,7 +4,7 @@ dview-swipe-layout
 
 #### 卡片
 
-![Dora视图_Swipe_Layout---](https://github.com/user-attachments/assets/0913d8ac-3f5f-4038-a8c7-d49c33c2fc5b)
+![DORA视图 轮回涌动龙](https://github.com/user-attachments/assets/11bd9c8e-d510-4d78-8225-9eb8d0a76511)
 ##### 卡名：Dora视图 SwipeLayout
 ###### 卡片类型：同调怪兽
 ###### 属性：光
