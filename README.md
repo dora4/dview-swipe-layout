@@ -4,8 +4,7 @@ dview-swipe-layout
 
 #### 卡片
 ![DORA视图 轮回涌动龙](https://github.com/user-attachments/assets/9c1ed908-6a40-4984-8e3f-2c6f9e21d756)
-
-https://github.com/user-attachments/assets/aa02322d-dd9f-49b6-a211-d18e15fe6775
+https://github.com/user-attachments/assets/1320308e-a858-4f1f-b951-715b3f50cc9f
 
 #### Gradle依赖配置
 
