@@ -17,6 +17,7 @@ import android.widget.TextView
 import dora.widget.swipelayout.R
 import java.util.Timer
 import java.util.TimerTask
+import kotlin.math.abs
 import kotlin.math.tan
 
 class SwipeLayout : RelativeLayout {
@@ -47,19 +48,19 @@ class SwipeLayout : RelativeLayout {
     private var canPullUp = true
 
     private var updateHandler: Handler = @SuppressLint("HandlerLeak")
-    object : Handler() {
+    object : Handler(context.mainLooper) {
         override fun handleMessage(msg: Message) {
             MOVE_SPEED = (8 + 5 * tan(
                 (Math.PI / 2
-                        / measuredHeight) * (pullDownY + Math.abs(pullUpY))
+                        / measuredHeight) * (pullDownY + abs(pullUpY))
             )).toFloat()
             if (!touch) {
                 if (state == REFRESHING && pullDownY <= refreshDist) {
                     pullDownY = refreshDist
-                    timer!!.cancel()
+                    timer?.cancel()
                 } else if (state == LOADING && -pullUpY <= loadMoreDist) {
                     pullUpY = -loadMoreDist
-                    timer!!.cancel()
+                    timer?.cancel()
                 }
             }
             if (pullDownY > 0) {
@@ -72,7 +73,7 @@ class SwipeLayout : RelativeLayout {
                 if (state != REFRESHING && state != LOADING) {
                     changeState(INIT)
                 }
-                timer!!.cancel()
+                timer?.cancel()
                 requestLayout()
             }
             if (pullUpY > 0) {
@@ -80,12 +81,12 @@ class SwipeLayout : RelativeLayout {
                 if (state != REFRESHING && state != LOADING) {
                     changeState(INIT)
                 }
-                timer!!.cancel()
+                timer?.cancel()
                 requestLayout()
             }
             requestLayout()
-            if (pullDownY + Math.abs(pullUpY) == 0f) {
-                timer!!.cancel()
+            if (pullDownY + abs(pullUpY) == 0f) {
+                timer?.cancel()
             }
         }
     }
@@ -127,7 +128,7 @@ class SwipeLayout : RelativeLayout {
     }
 
     private fun hide() {
-        timer!!.schedule(5)
+        timer?.schedule(5)
     }
 
     fun refreshFinish(refreshResult: Int) {
@@ -149,7 +150,7 @@ class SwipeLayout : RelativeLayout {
             }
         }
         if (pullDownY > 0) {
-            object : Handler() {
+            object : Handler(context.mainLooper) {
                 override fun handleMessage(msg: Message) {
                     changeState(DONE)
                     hide()
@@ -180,7 +181,7 @@ class SwipeLayout : RelativeLayout {
             }
         }
         if (pullUpY < 0) {
-            object : Handler() {
+            object : Handler(context.mainLooper) {
                 override fun handleMessage(msg: Message) {
                     changeState(DONE)
                     hide()
@@ -238,11 +239,10 @@ class SwipeLayout : RelativeLayout {
             MotionEvent.ACTION_POINTER_DOWN, MotionEvent.ACTION_POINTER_UP -> events = -1
             MotionEvent.ACTION_MOVE -> {
                 if (events == 0) {
-                    if (pullDownY > 0
-                        || ((pullableView as Pullable?)!!.canPullDown()
-                                && canPullDown && state != LOADING)
+                    if ((pullableView as Pullable?)!!.canPullDown()
+                        && canPullDown && state != LOADING
                     ) {
-                        pullDownY = pullDownY + (ev.y - lastY) / ratio
+                        pullDownY += (ev.y - lastY) / ratio
                         if (pullDownY < 0) {
                             pullDownY = 0f
                             canPullDown = false
@@ -254,8 +254,8 @@ class SwipeLayout : RelativeLayout {
                         if (state == REFRESHING) {
                             touch = true
                         }
-                    } else if (pullUpY < 0 || (pullableView as Pullable?)!!.canPullUp() && canPullUp && state != REFRESHING) {
-                        pullUpY = pullUpY + (ev.y - lastY) / ratio
+                    } else if ((pullableView as Pullable?)!!.canPullUp() && canPullUp && state != REFRESHING) {
+                        pullUpY += (ev.y - lastY) / ratio
                         pullUpY = pullUpY + ev.y - lastY
                         if (pullUpY > 0) {
                             pullUpY = 0f
@@ -275,9 +275,9 @@ class SwipeLayout : RelativeLayout {
                     events = 0
                 }
                 lastY = ev.y
-                ratio = (2 + 2 * Math.tan(
+                ratio = (2 + 2 * tan(
                     Math.PI / 2 / measuredHeight
-                            * (pullDownY + Math.abs(pullUpY))
+                            * (pullDownY + abs(pullUpY))
                 )).toFloat()
                 if (pullDownY > 0 || pullUpY < 0) {
                     requestLayout()
@@ -301,7 +301,7 @@ class SwipeLayout : RelativeLayout {
                         changeState(RELEASE_TO_LOAD)
                     }
                 }
-                if (pullDownY + Math.abs(pullUpY) > 8) {
+                if (pullDownY + abs(pullUpY) > 8) {
                     ev.action = MotionEvent.ACTION_CANCEL
                 }
             }
@@ -312,14 +312,10 @@ class SwipeLayout : RelativeLayout {
                 }
                 if (state == RELEASE_TO_REFRESH) {
                     changeState(REFRESHING)
-                    if (onSwipeListener != null) {
-                        onSwipeListener!!.onRefresh(this)
-                    }
+                    onSwipeListener?.onRefresh(this)
                 } else if (state == RELEASE_TO_LOAD) {
                     changeState(LOADING)
-                    if (onSwipeListener != null) {
-                        onSwipeListener!!.onLoadMore(this)
-                    }
+                    onSwipeListener?.onLoadMore(this)
                 }
                 hide()
             }
@@ -371,25 +367,20 @@ class SwipeLayout : RelativeLayout {
         )
     }
 
-    internal inner class RefreshTimer(private val handler: Handler) {
+    internal class RefreshTimer(private val handler: Handler) {
 
         private val timer: Timer = Timer()
         private var task: RefreshTask? = null
 
         fun schedule(period: Long) {
-            if (task != null) {
-                task!!.cancel()
-                task = null
-            }
+            task?.cancel()
             task = RefreshTask(handler)
             timer.schedule(task, 0, period)
         }
 
         fun cancel() {
-            if (task != null) {
-                task!!.cancel()
-                task = null
-            }
+            task?.cancel()
+            task = null
         }
 
         private inner class RefreshTask(private val handler: Handler) : TimerTask() {
